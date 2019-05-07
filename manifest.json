@@ -1,0 +1,11 @@
+{
+  "name": "PowerPen",
+  "short_name": "PowerPen",
+  "start_url": "./?utm_source=web_app_manifest",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#F44336", 
+  "scope":"./",  
+  "orientation":"portrait", 
+  "lang":"es"
+}
