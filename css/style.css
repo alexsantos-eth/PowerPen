@@ -3,6 +3,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
 }
 .add-button{
   opacity:0;
@@ -57,4 +58,11 @@ nav div.nav-wrapper a.searchBtn{
 }
 .sidenav .google a{
   color:#D44638;
+}
+
+.btn-floating{
+  position:fixed ;
+  bottom:0;
+  right:0;
+  margin:20px;
 }
