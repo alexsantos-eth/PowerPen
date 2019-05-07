@@ -10,13 +10,12 @@
 }
 body{
   font-size:12px;
-  overscroll-behavior:contain;
+  scroll-behavior:contain;
 }
 nav div.nav-wrapper{
   background:#9C27B0;
 }
 nav div.nav-wrapper a.brand-logo {
-  
   font-size:2rem;
   font-family: 'Poppins', sans-serif;
 }
@@ -28,4 +27,34 @@ nav div.nav-wrapper a.brand-logo img{
 }
 nav div.nav-wrapper a.searchBtn{
   margin-right:15px;
+}
+.sidenav .user-view{
+  display:flex;
+  align-items: center ;
+  padding:20px;
+}
+.sidenav .user-view .circle {
+  box-shadow:0 0 40px rgba(0,0,0,.3);
+}
+.sidenav .user-view .userInfo{
+  margin-left:10px;
+  width:100%;
+}
+
+.sidenav .user-view .userInfo span.name{
+  font-weight: bold ;
+  font-size:1.9em ;
+}
+.sidenav .user-view .userInfo span{
+  color:#6A1B9A;
+}
+.sidenav .user-view .background img{
+  width:350px;
+}
+
+.sidenav .fb a{
+  color:#3b5998;
+}
+.sidenav .google a{
+  color:#D44638;
 }

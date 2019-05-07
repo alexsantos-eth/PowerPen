@@ -4,6 +4,8 @@ const urlsToCache=[
   "./css/style.css",
   "./js/main.js", 
   "./img/icon.png", 
+  "./img/logoP.png",
+  "./img/classroom.jpg",
   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", 
   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css", 
   "https://fonts.googleapis.com/icon?family=Material+Icons"
