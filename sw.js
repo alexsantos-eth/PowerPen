@@ -1,14 +1,7 @@
 const CACHE_NAME = "v1_cache";
 const urlsToCache=[
   "./",
-  "./css/theme/default.css",
-  "./css/reveal.css",
-  "./css/style.css",
-  "./index.html",
-  "./js/main.js",
-  "./js/reveal.js",
-  "./app.js",
-  "https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"
+  "./main.js"
 ]
 
 self.addEventListener("install", e => {
