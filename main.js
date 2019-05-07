@@ -25,9 +25,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted E3 prompt');
+          console.log('User accepted Pp prompt');
         } else {
-          console.log('User dismissed the E3 prompt');
+          console.log('User dismissed the Pp prompt');
         }
         deferredPrompt = null;
       });

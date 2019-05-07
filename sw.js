@@ -1,7 +1,8 @@
 const CACHE_NAME = "v1_cache";
 const urlsToCache=[
   "./",
-  "./main.js"
+  "./main.js", 
+  "./img/icon.png"
 ]
 
 self.addEventListener("install", e => {
