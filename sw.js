@@ -6,7 +6,7 @@ const urlsToCache=[
   "./img/icon.png", 
   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", 
   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css", 
-  "https://cdn.jsdelivr.net/gh/blobysoftware/GeckoJs/gecko.min.js"
+  "https://fonts.googleapis.com/icon?family=Material+Icons"
 ]
 
 self.addEventListener("install", e => {

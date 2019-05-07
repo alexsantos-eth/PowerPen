@@ -3,7 +3,7 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.register("./sw.js")
 
   .then(e => console.log(e))
- .catch(er => alert(er));
+ .catch(er => console.log(er)) ;
 }
 let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
@@ -29,3 +29,5 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 
+var elems = document.querySelectorAll('.sidenav');
+var instances = M.Sidenav.init(elems, {preventScrolling:true}); 
