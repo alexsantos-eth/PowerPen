@@ -10,6 +10,7 @@
 }
 body{
   font-size:12px;
+  overscroll-behavior:contain;
 }
 nav div.nav-wrapper{
   background:#9C27B0;
