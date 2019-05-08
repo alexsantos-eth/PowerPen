@@ -9,6 +9,10 @@
   opacity:0;
   position:absolute;
 }
+.add-buttons{
+  position:absolute;
+  z-index:10;
+}
 body{
   font-size:12px;
   scroll-behavior:contain;
@@ -59,7 +63,15 @@ nav div.nav-wrapper a.searchBtn{
 .sidenav .google a{
   color:#D44638;
 }
-
+.sidenav .download{
+  background:#2196F3;
+}
+.sidenav .download a{
+  color:#fff;
+}
+ .sidenav .download a .material-icons{
+   color:#fff;
+ } 
 .btn-floating{
   position:fixed ;
   bottom:0;
