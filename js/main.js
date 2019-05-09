@@ -57,4 +57,4 @@ function notifyMe(msg, body) {
   }
 }
 
-notifyMe("hola", "este es un mensaje de prueba");
+notifyMe("hola", "este es otro mensaje de prueba 2");
