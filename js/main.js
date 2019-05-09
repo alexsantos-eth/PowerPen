@@ -43,7 +43,7 @@ function notifyMe(msg, body) {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
         body: body,
-        badge:"./img/logo.png",
+        badge:"./img/logoP.png",
         icon: './img/icon.png',
         actions:[
           {
