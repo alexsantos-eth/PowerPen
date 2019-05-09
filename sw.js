@@ -10,9 +10,9 @@ const urlsToCache=[
   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js", 
   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css", 
   "https://fonts.googleapis.com/icon?family=Material+Icons", 
-  "https://fonts.googleapis.com/css?family=Poppins"
+  "https://fonts.googleapis.com/css?family=Poppins", 
+  "https://cdn.jsdelivr.net/npm/vue"
 ]
-
 self.addEventListener("install", e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
@@ -23,10 +23,8 @@ self.addEventListener("install", e => {
       .catch(err => console.log(err))
   )
 })
-
 self.addEventListener('activate', e => {
   const cacheWhitelist = [CACHE_NAME]
-  
   e.waitUntil(
     caches.keys()
       .then(cacheNames => {
@@ -41,7 +39,6 @@ self.addEventListener('activate', e => {
       .then(() => self.clients.claim())
   )
 })
-
 self.addEventListener('fetch', e => {
   e.respondWith(
     caches.match(e.request)

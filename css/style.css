@@ -1,4 +1,3 @@
-
 *{
   margin:0;
   padding:0;
@@ -10,42 +9,51 @@ body{
   font-size:12px;
   scroll-behavior:contain;
 }
+
 nav div.nav-wrapper{
   background:#9C27B0;
 }
+
 nav div.nav-wrapper a.brand-logo {
   font-size:2rem;
   font-family: 'Poppins', sans-serif;
 }
+
 nav div.nav-wrapper a.brand-logo img{
-  position:relative ;
+  position:relative;
   width:40px;
- top:8px;
+  top:8px;
   margin-right:-10px;
 }
-nav div.nav-wrapper a.searchBtn{
+
+nav div.nav-wrapper .searchBtn{
   margin-right:15px;
 }
+
 .sidenav .user-view{
   display:flex;
   align-items: center ;
   padding:20px;
 }
+
 .sidenav .user-view .circle {
   box-shadow:0 0 40px rgba(0,0,0,.3);
 }
+
 .sidenav .user-view .userInfo{
   margin-left:10px;
   width:100%;
 }
 
-.sidenav .user-view .userInfo span.name{
-  font-weight: bold ;
+.sidenav .user-view .userInfo .name{
+  font-weight:bold;
   font-size:1.9em ;
 }
+
 .sidenav .user-view .userInfo span{
   color:#6A1B9A;
 }
+
 .sidenav .user-view .background img{
   width:350px;
 }
@@ -53,20 +61,25 @@ nav div.nav-wrapper a.searchBtn{
 .sidenav .fb a{
   color:#3b5998;
 }
+
 .sidenav .google a{
   color:#D44638;
 }
+
 .sidenav .download{
   background:#2196F3;
 }
+
 .sidenav .download a{
   color:#fff;
 }
- .sidenav .download a .material-icons{
-   color:#fff;
- } 
+
+.sidenav .download a .material-icons{
+  color:#fff;
+} 
+ 
 .btn-floating{
-  position:fixed ;
+  position:fixed;
   bottom:0;
   right:0;
   margin:20px;

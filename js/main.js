@@ -1,10 +1,9 @@
 if('serviceWorker' in navigator){
-
   navigator.serviceWorker.register("./sw.js")
-
   .then(e => console.log(e))
  .catch(er => console.log(er)) ;
 }
+
 let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
 addBtn.style.display = 'none';
@@ -13,7 +12,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
   addBtn.style.display = 'block';
-
   addBtn.addEventListener('click', (e) => {
     addBtn.style.display = 'none';
     deferredPrompt.prompt();
@@ -28,15 +26,12 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
 
-
 var elems = document.querySelectorAll('.sidenav');
 var instances = M.Sidenav.init(elems, {preventScrolling:true}); 
-
 
 Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
 });
-
 
 function notifyMe(msg, body) {
   if (Notification.permission == 'granted') {
@@ -61,6 +56,5 @@ function notifyMe(msg, body) {
     });
   }
 }
-
 
 notifyMe("hola", "este es un mensaje de prueba");

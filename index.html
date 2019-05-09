@@ -8,7 +8,6 @@
   <meta name="Author" content="AlexSantos">
   <meta name="Robots" content="follow">
   <meta name="description" content="PowerPen is an OpenSource app for upload homeworks, docs, and share education content, it's built from students to students.">
-    
   <meta name="MobileOptimized" content="yes">
   <meta name="HandheldFriendly" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -17,30 +16,39 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" type="image/png" href="./img/icon.png">
-    <link rel="favicon" type="image/png" href="./img/icon.png">
-    <link rel="apple-touch-icon" href="./img/icon.png" />
+  <link rel="favicon" type="image/png" href="./img/icon.png">
+  <link rel="apple-touch-icon" href="./img/icon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
-  
-<meta property="og:title" content="PowerPen" />
-    <meta property="og:description" content="PowerPen is an OpenSource app for upload homeworks, docs, and share education content, it's built from students to students." />
-    <meta property="og:image" content="https://alexsan134.github.io/PowerPen/img/banner.jpg" />      
-    <meta property="og:url" content="https://alexsan134.github.io/PowerPen" />
-    <meta property="og:site_name" content="PowerPen"/>
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="1342183889264144" />
+  <meta property="og:title" content="PowerPen" />
+  <meta property="og:description" content="PowerPen is an OpenSource app for upload homeworks, docs, and share education content, it's built from students to students." />
+  <meta property="og:image" content="https://alexsan134.github.io/PowerPen/img/banner.jpg" />      
+  <meta property="og:url" content="https://alexsan134.github.io/PowerPen" />
+  <meta property="og:site_name" content="PowerPen"/>
+  <meta property="og:type" content="website" />
+  <meta property="fb:app_id" content="1342183889264144" />
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-   
-  
-   <nav> <div class="nav-wrapper"> <a href="#!" class="brand-logo"><img src="./img/logoP.png">PowerPen</a> <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-   <a href="#" class="right searchBtn"><i class="material-icons">search</i></a>
-   </div>
-   </nav>
-   <ul id="slide-out" class="sidenav"> <li>
+  <!-- MAIN UI -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">
+        <img src="./img/logoP.png">
+      PowerPen</a>
+      <a href="#" data-target="slide-out" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <a href="#" class="right searchBtn">
+        <i class="material-icons">search</i>
+      </a>
+    </div>
+  </nav>
+  <ul id="slide-out" class="sidenav">
+    <li>
       <div class="user-view">
         <div class="background">
           <img src="./img/classroom2.jpg">
@@ -50,50 +58,49 @@
         </a>
         <a href="#name" class="userInfo">
           <span class="name">Alex Santos</span>
-           <span class="email">as62971@gmail.com</span>
+          <span class="email">as62971@gmail.com</span>
         </a>
-       
       </div>
-     </li>
-     <li>
-       <a href="#!">
-         <i class="material-icons">import_contacts</i>Notas</a>
-     </li>
-     <li>
+    </li>
+    <li>
       <a href="#!">
-         <i class="material-icons">style</i>Clases</a>
-     </li>
-     <li>
-          <li>
-
+       <i class="material-icons">import_contacts</i>Notas
+      </a>
+    </li>
+    <li>
       <a href="#!">
-
-         <i class="material-icons">event_note</i>Noticias</a>
-     </li>
-     <li>
-       <div class="divider"></div>
-     </li>
-     <li>
-       <a class="subheader">Cuenta</a>
-     </li> 
-      <li>
-
+       <i class="material-icons">style</i>Clases
+      </a>
+    </li>
+    <li>
       <a href="#!">
-
-         <i class="material-icons">logout</i>Cerrar sesión</a>
-     </li>
-     <li>
-     <li class="download">
-
-
-<a href="#" class="waves-effect add-button">
-       <i class="material-icons">file_download</i>Descargar app</a>
-
-     </li>
-   </ul> 
+       <i class="material-icons">event_note</i>Noticias
+      </a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a class="subheader">Cuenta</a>
+    </li> 
+    <li>
+      <a href="#!">
+       <i class="material-icons">logout</i>Cerrar sesión
+     </a>
+    </li>
+    <li class="download">
+      <a href="#" class="waves-effect add-button">
+        <i class="material-icons">file_download</i>Descargar app
+      </a>
+    </li>
+  </ul> 
+  <a class="btn-floating btn-large waves-effect waves-light grey">
+    <i class="material-icons">create</i>
+  </a>
+   <!--- COMPONENTS -->
    
-   <a class="btn-floating btn-large waves-effect waves-light grey"><i class="material-icons">create</i></a>
-   <script src="./js/main.js"></script>
+   
+   
+  <script src="./js/main.js"></script>
 </body>
-
 </html>
