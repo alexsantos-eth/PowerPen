@@ -44,7 +44,7 @@ function notifyMe(msg) {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
         body: 'Here is a notification body!',
-        icon: 'img/icon.png',
+        icon: './img/icon.png',
         vibrate: [100, 50, 100],
         data: {
           dateOfArrival: Date.now(),
