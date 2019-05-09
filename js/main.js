@@ -32,6 +32,11 @@ window.addEventListener('beforeinstallprompt', (e) => {
 var elems = document.querySelectorAll('.sidenav');
 var instances = M.Sidenav.init(elems, {preventScrolling:true}); 
 
+
+Notification.requestPermission(function(status) {
+    console.log('Notification permission status:', status);
+});
+
 function notifyMe(msg) {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
@@ -57,4 +62,4 @@ function notifyMe(msg) {
   // At last, if the user has denied notifications, and you
   // want to be respectful there is no need to bother them any more.
 }
-notifyMe ("hola");
+notifyMe("hola");
