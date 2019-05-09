@@ -37,11 +37,24 @@ Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
 });
 
+
+
 function notifyMe(msg) {
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
-      reg.showNotification(msg);
+      var options = {
+        body: 'Here is a notification body!',
+        icon: 'img/icon.png',
+        vibrate: [100, 50, 100],
+        data: {
+          dateOfArrival: Date.now(),
+          primaryKey: 1
+        }
+      };
+      reg.showNotification(msg, options);
     });
   }
 }
+
+
 notifyMe("hola");
