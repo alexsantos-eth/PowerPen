@@ -38,13 +38,19 @@ Notification.requestPermission(function(status) {
 });
 
 
-
-function notifyMe(msg) {
+function notifyMe(msg, body) {
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
-        body: 'Here is a notification body!',
+        body: body,
+        badge:"./img/logo.png",
         icon: './img/icon.png',
+        actions:[
+          {
+            title:"Ver noticia", 
+            action:"showFeed"
+          }
+          ], 
         vibrate: [100, 50, 100],
         data: {
           dateOfArrival: Date.now(),
@@ -57,4 +63,4 @@ function notifyMe(msg) {
 }
 
 
-notifyMe("hola");
+notifyMe("hola", "este es un mensaje de prueba");
