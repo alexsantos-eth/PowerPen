@@ -38,8 +38,8 @@ function notifyMe(msg, body) {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
         body: body,
-        badge:"./img/logoP.png",
-        icon: './img/icon.png',
+        badge:"./img/logoN.png",
+        icon: './img/iconN.png',
         actions:[
           {
             title:"Ver noticia", 

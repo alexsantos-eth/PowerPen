@@ -28,7 +28,8 @@ nav div.nav-wrapper a.brand-logo img{
   position:relative;
   width:40px;
   top:8px;
-  margin-right:-10px;
+  margin-left:-5px;
+  margin-right: -13px;
 }
 
 nav div.nav-wrapper .searchBtn{
