@@ -97,6 +97,7 @@ main{
   margin-top: 50px;
   padding:21px 21px 11px 21px;
   /*background:linear-gradient(to bottom, #fff,rgba(0,0,0, 0.3)) ;*/
+  background:rgba(0,0,0, 0.05) ;
 }
 main .card .card-image{
   height:150px;
@@ -123,12 +124,13 @@ main .card .card-content .card-title{
 main .card .card-action {
   padding-top:7px;
 }
+main .card .card-action a:nth-child(2){
+  margin-left:-10px;
+}
 .bold{
   font-weight:bold;
 }
-main .card  .card-action a, main .card .card-actiona > i{
-  color:#7E57C2!important;
-}
+
 
 main .card .card-content .moreBtn{
   position:absolute ;
@@ -148,9 +150,31 @@ main .card .card-reveal .closeBtn{
   right:20px;
   top:25px;
 }
-
+main .horizontal .card-stacked .card-action a {
+  margin-top:-2px;
+  width:100%;
+  display:inline-block;
+  text-align:center;
+  margin-left:-3px;
+}
+main .horizontal{
+  overflow: hidden ;
+}
+main .horizontal .card-stacked .card-action a i{
+  position:relative ;
+  top:8px; 
+}
+main .horizontal .card-image{
+  padding:0;
+  margin:0;
+}
+main .horizontal .card-image img{
+  margin:0;
+  
+}
 .input-field label {
   color:#7E57C2;
+  
 } 
     
     
