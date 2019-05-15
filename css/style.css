@@ -88,14 +88,15 @@ nav div.nav-wrapper .searchBtn{
   position:fixed;
   bottom:0;
   right:0;
-  margin:20px;
+  margin:10px;
   background:rgb(80,80,80);
   z-index:10;
 }
 
 main{
   margin-top: 50px;
-  padding:21px;
+  padding:21px 21px 11px 21px;
+  /*background:linear-gradient(to bottom, #fff,rgba(0,0,0, 0.3)) ;*/
 }
 main .card .card-image{
   height:150px;
@@ -107,9 +108,9 @@ main .card .card-content a{
 main .card .card-content a:nth-child(1){
   margin-right:15px;
 }
-main .card .card-content a i{
+main .card .card-content a i, .card-action a i{
   position: relative ;
-  top:7px;
+  top:07px;
   margin-right:5px;
 }
 main .card .card-content .card-title{
@@ -119,6 +120,15 @@ main .card .card-content .card-title{
   -webkit-user-select: none;
   -o-user-select: none;
  }
+main .card .card-action {
+  padding-top:7px;
+}
+.bold{
+  font-weight:bold;
+}
+main .card  .card-action a, main .card .card-actiona > i{
+  color:#7E57C2!important;
+}
 
 main .card .card-content .moreBtn{
   position:absolute ;
