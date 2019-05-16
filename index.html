@@ -39,14 +39,14 @@
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">
         <img src="./img/logoN.png"><span>owerPen</span></a>
-      <a href="#" data-target="slide-out" class="sidenav-trigger">
+      <a href="#!" data-target="slide-out" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
-      <a href="#" id="searchBtn" class="searchBtn right">
+      <a href="#!" id="searchBtn" class="searchBtn right">
         <i class="material-icons">search</i>
       </a>
        <form>
-         <input type="search" id="searchInput">
+         <input type="search" id="searchInput" placeholder="Buscar artículos, tareas">
        </form>
     </div>
       </nav>
@@ -56,10 +56,10 @@
         <div class="background">
           <img src="./img/classroom2.jpg">
         </div> 
-        <a href="#user">
+        <a href="#!">
           <img class="circle" src="./img/user2.jpg">
         </a>
-        <a href="#name" class="userInfo">
+        <a href="#!" class="userInfo">
           <span class="name">Alex Santos</span>
           <span class="email">as62971@gmail.com</span>
         </a>
@@ -71,7 +71,7 @@
       </a>
     </li>
     <li>
-      <a href="#!">
+      <a href="">
        <i class="material-icons">style</i>Clases
       </a>
     </li>
@@ -87,32 +87,27 @@
       <a class="subheader">Cuenta</a>
     </li> 
     <li>
-      <a href="">
+      <a href="#!">
        <i class="material-icons">settings</i>Configuracion
      </a>
     </li>
     <li>
-      <a href="">
+      <a href="#!">
        <i class="material-icons">logout</i>Cerrar sesión
      </a>
     </li>
     <li class="download">
-      <a href="#" class="waves-effect add-button">
+      <a href="#!" class="waves-effect add-button">
         <i class="material-icons">file_download</i>Descargar app
       </a>
     </li>
   </ul> 
-  <a class="btn-floating btn-large waves-effect waves-dark grey">
+  <a class="btn-floating btn-large waves-effect grey darken-2 scale-transition scale-out">
     <i class="material-icons">create</i>
   </a>
    <!--- COMPONENTS -->
   <main id="content">
-    <news-feed 
-      title="Be somebody by 3 Doors Down Lyrics" 
-      desc='The shades go up Mothers staring down She dont know where hes been Or how long hes been out She said, "Boy, Im tired of waiting up While youre out with your friends" He said, "Mom, Im trying And Im living my life the best way that I can" "Cause Im trying to be somebody" Im not trying to be somebody'
-      img="./img/example.jpg">
-    </news-feed>
-    <note 
+   <!--<note 
       name="Social Humanística 1 "
       desc="Tarea número 4"
       img="./img/example2.jpg"
@@ -123,6 +118,56 @@
       desc="Semestre Sección F"
       not="3">
     </class>
+    <news-feed 
+      title="Be somebody by 3 Doors Down Lyrics" 
+      desc='The shades go up Mothers staring down She dont know where hes been Or how long hes been out She said, "Boy, Im tired of waiting up While youre out with your friends" He said, "Mom, Im trying And Im living my life the best way that I can" "Cause Im trying to be somebody" Im not trying to be somebody'
+      img="./img/example.jpg">
+    </news-feed> -->
+    <section id="preloaders">
+      <div class="card loader">
+        <div class="card-content">
+          <div class="row">
+            <div class="progress grey lighten-3 col s12">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div> 
+          </div>
+          <div class="row">
+            <div class="progress grey lighten-3 col s6">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="progress grey lighten-3 col s9">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card loaderM">
+        <div class="card-content">
+          <div class="row">
+            <div class="progress grey lighten-3 col s10">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div> 
+          </div>
+          <div class="row">
+            <div class="progress grey lighten-3 col s8">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="progress grey lighten-3 col s12">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="progress grey lighten-3 col s5">
+              <div class="indeterminate deep-purple lighten-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="./js/main.js"></script>
   <script src="./app.js"></script>

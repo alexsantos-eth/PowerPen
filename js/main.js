@@ -86,7 +86,7 @@ searchBtn.addEventListener("click", () =>{
       searchInput.focus();
       searchInput.style.opacity="1";
 
-    searchInput.style.width="45%";
+    searchInput.style.width="50%";
     }, 10)
     
     toggleSearch = !toggleSearch;
@@ -112,14 +112,14 @@ searchInput.addEventListener("focusout",()=>{
   }, 10)
 })
 
-document.addEventListener('keydown', function (event) {
-  if (event.defaultPrevented) {
-    return;
-  }
-  
-  var key = event.key || event.keyCode;
-  
-  if (key === 'Escape' || key === 'Esc' || key === 27) {
-    alert("js");
-  }
-});
+
+
+
+//animations
+
+let btnFloating = document.querySelector(".btn-floating");
+
+setTimeout(()=>{
+  btnFloating.classList.add("scale-in");
+}, 500)
+

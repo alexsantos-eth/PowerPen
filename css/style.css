@@ -8,8 +8,7 @@
 body{
   font-size:12px;
   overscroll-behavior-x: none;
-  background:rgba(255,255,255);
-}
+  background:rgba(0,0,0, 0.05) ;} 
 nav{
   position:fixed;
   top:0;
@@ -120,7 +119,7 @@ main{
   margin-top: 50px;
   padding:21px 21px 11px 21px;
   /*background:linear-gradient(to bottom, #fff,rgba(0,0,0, 0.3)) ;*/
-  background:rgba(0,0,0, 0.05) ;
+  
 }
 main .card .card-image{
   height:150px;
@@ -199,5 +198,16 @@ main .horizontal .card-image img{
   color:#7E57C2;
   
 } 
-    
-    
+
+.loader .row:nth-child(3){
+  margin:0!important;
+}
+.loader .row:nth-child(3) .progress{
+  margin-bottom:05px!important;
+}
+.loaderM .row:nth-child(4){
+  margin:0!important;
+}
+.loaderM .row:nth-child(4) .progress{
+  margin-bottom:05px!important;
+}
