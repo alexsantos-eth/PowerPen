@@ -13,7 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="theme-color" content="#673AB7">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="PowerPen">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" type="image/png" href="./img/iconN.png">
   <link rel="favicon" type="image/png" href="./img/iconN.png">
@@ -37,15 +38,18 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">
-        <img src="./img/logoN.png"> owerPen</a>
+        <img src="./img/logoN.png"><span>owerPen</span></a>
       <a href="#" data-target="slide-out" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
-      <a href="#" class="right searchBtn">
+      <a href="#" id="searchBtn" class="searchBtn right">
         <i class="material-icons">search</i>
       </a>
+       <form>
+         <input type="search" id="searchInput">
+       </form>
     </div>
-  </nav>
+      </nav>
   <ul id="slide-out" class="sidenav">
     <li>
       <div class="user-view">
@@ -107,7 +111,7 @@
       title="Be somebody by 3 Doors Down Lyrics" 
       desc='The shades go up Mothers staring down She dont know where hes been Or how long hes been out She said, "Boy, Im tired of waiting up While youre out with your friends" He said, "Mom, Im trying And Im living my life the best way that I can" "Cause Im trying to be somebody" Im not trying to be somebody'
       img="./img/example.jpg">
-    </news-feed>  
+    </news-feed>
     <note 
       name="Social Humanística 1 "
       desc="Tarea número 4"

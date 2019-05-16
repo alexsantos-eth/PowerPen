@@ -3,7 +3,7 @@
   "short_name": "PowerPen",
   "description":"PowerPen is an OpenSource app for upload homeworks, docs, and share education content, it's built from students to students.", 
   "version":"1.0.0",
-  "start_url": "./?utm_source=web_app_manifest",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#673AB7", 

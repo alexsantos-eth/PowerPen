@@ -25,13 +25,24 @@ window.addEventListener('beforeinstallprompt', (e) => {
       });
   });
 });
-
+let generalSide = false;
 var elems = document.querySelectorAll('.sidenav');
-var instances = M.Sidenav.init(elems, {preventScrolling:true}); 
+var sideNav = M.Sidenav.init(elems[0], {preventScrolling:true, onOpenStart:()=>{
+  generalSide = true;
+}, onCloseStart:() =>{
+  if(toggleSearch){
+    setTimeout(() =>{
+      searchBtn.click();
+    }, 100)
+  }
+  generalSide = false;
+}}); 
 
+
+if('Notification' in navigator){
 Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
-});
+});} 
 
 function notifyMe(msg, body) {
   if (Notification.permission == 'granted') {
@@ -57,6 +68,58 @@ function notifyMe(msg, body) {
   }
 }
 
+var searchBtn = document.getElementById("searchBtn");
 
+var title = document.querySelector(".brand-logo");
 
+var imgLogo = document.querySelector(".brand-logo > img");
+var toggleSearch =false;
+let l = title.style.left;
+let searchInput = document.getElementById("searchInput");
+searchInput.style.width="0";
+searchBtn.addEventListener("click", () =>{
+  if(!toggleSearch){
+    title.style.left="120px";
+    title.childNodes[2].style.opacity="0";
+    searchInput.style.display = "block";
+    setTimeout(()=>{
+      searchInput.focus();
+      searchInput.style.opacity="1";
 
+    searchInput.style.width="45%";
+    }, 10)
+    
+    toggleSearch = !toggleSearch;
+  }else{
+    searchInput.style.opacity="0";
+    searchInput.style.width="0";
+    setTimeout(()=>{
+      searchInput.style.display="none";
+    } , 500);
+    title.style.left=l;
+    title.childNodes[2].style.opacity="1";
+    toggleSearch = !toggleSearch;
+  }
+})
+
+searchInput.addEventListener("focusout",()=>{
+  setTimeout(()=>{
+    
+
+  if(toggleSearch && !generalSide){
+    searchBtn.click();
+  }
+  }, 10)
+})
+
+document.addEventListener('keydown', function (event) {
+  if (event.defaultPrevented) {
+    return;
+  }
+  
+  var key = event.key || event.keyCode;
+  
+  if (key === 'Escape' || key === 'Esc' || key === 27) {
+    alert("js");
+  }
+});
