@@ -126,6 +126,7 @@ let nav = document.getElementById("navbar");
 setTimeout(()=>{
   form.classList.add("scaled");
   form.style.transform ="translate(-50%,-50%) scale(1,1)";
+ 
   shadow.addEventListener("click", ()=>{
 
   form.classList.remove("scaled");

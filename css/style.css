@@ -10,10 +10,11 @@ body{
   overscroll-behavior-x: none;
   background:rgba(0,0,0, 0.05) ;} 
 nav{
-  filter: blur(3px);
   position:fixed;
   top:0;
   z-index:10;
+  filter:blur(3px );
+  transition: all 0.1s ease-in ;
 }
 nav div.nav-wrapper{
   background:#7E57C2;
@@ -208,8 +209,9 @@ main .horizontal .card-image img{
 
 #preloaders {
   margin-top:-5px;
+  transition: all 0.1s ease-in;
+  filter:blur(03px);
   padding:0px 21px 11px 21px;
-  filter: blur(03px);
 }
 .loader .row:nth-child(3){
   margin:0!important;
@@ -231,7 +233,6 @@ main .horizontal .card-image img{
   background:rgba(0,0,0, 0.4);
   opacity:0.3;
   z-index:1000;
-  transition:all 0.3s ease-in;
 }
 @keyframes scaleX{
   0%{
