@@ -1,7 +1,7 @@
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register("./sw.js")
   .then(e => console.log(e))
- .catch(er => console.log(er)) ;
+  .catch(er => console.log(er));
 }
 
 let deferredPrompt;
@@ -38,7 +38,6 @@ var sideNav = M.Sidenav.init(elems[0], {preventScrolling:true, onOpenStart:()=>{
   generalSide = false;
 }}); 
 
-
 if('Notification' in navigator){
 Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
@@ -69,13 +68,12 @@ function notifyMe(msg, body) {
 }
 
 var searchBtn = document.getElementById("searchBtn");
-
 var title = document.querySelector(".brand-logo");
-
 var imgLogo = document.querySelector(".brand-logo > img");
 var toggleSearch =false;
 let l = title.style.left;
 let searchInput = document.getElementById("searchInput");
+
 searchInput.style.width="0";
 searchBtn.addEventListener("click", () =>{
   if(!toggleSearch){
@@ -85,10 +83,8 @@ searchBtn.addEventListener("click", () =>{
     setTimeout(()=>{
       searchInput.focus();
       searchInput.style.opacity="1";
-
-    searchInput.style.width="50%";
+      searchInput.style.width="50%";
     }, 10)
-    
     toggleSearch = !toggleSearch;
   }else{
     searchInput.style.opacity="0";
@@ -104,11 +100,9 @@ searchBtn.addEventListener("click", () =>{
 
 searchInput.addEventListener("focusout",()=>{
   setTimeout(()=>{
-    
-
-  if(toggleSearch && !generalSide){
-    searchBtn.click();
-  }
+    if(toggleSearch && !generalSide){
+      searchBtn.click();
+    }
   }, 10)
 })
 
@@ -125,12 +119,9 @@ let nav = document.getElementById("navbar");
 
 setTimeout(()=>{
   form.classList.add("scaled");
-  form.style.transform ="translate(-50%,-50%) scale(1,1)";
- 
+  form.style.opacity="1";
   shadow.addEventListener("click", ()=>{
-
   form.classList.remove("scaled");
-
   form.classList.add("inverted");
   form.style.transform ="translate(-50%,-50%) scale(0,0)";
   shadow.style.opacity = "0";
@@ -147,4 +138,5 @@ function main(){
   setTimeout(()=>{
     btnFloating.classList.add("scale-in");
   }, 500);
+  
 }

@@ -4,7 +4,6 @@
   box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
 }
-
 body{
   font-size:12px;
   overscroll-behavior-x: none;
@@ -13,7 +12,7 @@ nav{
   position:fixed;
   top:0;
   z-index:10;
-  filter:blur(3px );
+  filter:blur(3px);
   transition: all 0.1s ease-in ;
 }
 nav div.nav-wrapper{
@@ -117,7 +116,6 @@ nav .nav-wrapper form input:focus{
 }
 
 main{
-
   margin-top: 50px;
   padding:21px 21px 11px 21px;
   /*background:linear-gradient(to bottom, #fff,rgba(0,0,0, 0.3)) ;*/
@@ -153,8 +151,6 @@ main .card .card-action a:nth-child(2){
 .bold{
   font-weight:bold!important;
 }
-
-
 main .card .card-content .moreBtn{
   position:absolute ;
   top:178px;
@@ -182,18 +178,16 @@ main .horizontal .card-stacked .card-action a {
 }
 main .horizontal{
   overflow: hidden ;
+  
+  
 }
 main .horizontal .card-stacked .card-action a i{
   position:relative ;
   top:8px; 
 }
-main .horizontal .card-image{
-  padding:0;
-  margin:0;
-}
+
 main .horizontal .card-image img{
-  margin:0;
-  
+  object-fit:cover;
 }
 .input-field label {
   color:#7E57C2!important;
@@ -210,8 +204,8 @@ main .horizontal .card-image img{
 #preloaders {
   margin-top:-5px;
   transition: all 0.1s ease-in;
-  filter:blur(03px);
   padding:0px 21px 11px 21px;
+  filter:blur(3px);
 }
 .loader .row:nth-child(3){
   margin:0!important;
@@ -236,13 +230,15 @@ main .horizontal .card-image img{
 }
 @keyframes scaleX{
   0%{
-    transform: translate(-50%,-50%) scale(0,0);
+    transform: translate(-50%,-50%) scale(0.7,0.7);
+    opacity:0;
   }
   50%{
     transform: translate(-50%,-50%) scale(1.1,1.1);
   }
   80%{
     transform: translate(-50%,-50%) scale(1,1);
+    opacity:1;
   }
 }
 @keyframes scale-X{
@@ -262,15 +258,17 @@ main .horizontal .card-image img{
   position:fixed;
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%) scale(0,0);
+  transform:translate(-50%,-50%) scale(1,1);
   background:#fff;
   z-index:1001;
   padding:15px 30px 30px 30px;
-  text-align:center ;
+  text-align:center;
+  opacity:0;
+  
 }
 
 .scaled{
-  animation: scaleX 0.3s linear 1;
+  animation:scaleX 0.2s linear 1;
 }
 .inverted{
   animation: scale-X 0.3s linear 1;
