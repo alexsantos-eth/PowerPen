@@ -265,6 +265,7 @@ main .horizontal .card-image img{
   background:#fff;
   z-index:1001;
   padding:15px 30px 30px 30px;
+  text-align:center ;
 }
 
 .scaled{
@@ -281,6 +282,14 @@ main .horizontal .card-image img{
 }
 #loginForm .row{
   margin:0 auto;
+}
+#loginForm a{
+  padding-bottom:40px!important;
+}
+
+#loginForm a i{
+  position: relative ;
+  top:2px;
 }
 
 #loginForm a:nth-child(1){

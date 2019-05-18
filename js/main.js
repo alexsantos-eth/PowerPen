@@ -126,10 +126,10 @@ let nav = document.getElementById("navbar");
 setTimeout(()=>{
   form.classList.add("scaled");
   form.style.transform ="translate(-50%,-50%) scale(1,1)";
-}, 500)
+  shadow.addEventListener("click", ()=>{
 
-shadow.addEventListener("click", ()=>{
   form.classList.remove("scaled");
+
   form.classList.add("inverted");
   form.style.transform ="translate(-50%,-50%) scale(0,0)";
   shadow.style.opacity = "0";
@@ -140,7 +140,7 @@ shadow.addEventListener("click", ()=>{
     main();
   } ,300);
 })
-
+}, 500)
 
 function main(){
   setTimeout(()=>{
