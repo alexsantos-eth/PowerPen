@@ -118,8 +118,32 @@ searchInput.addEventListener("focusout",()=>{
 //animations
 
 let btnFloating = document.querySelector(".btn-floating");
+let form = document.getElementById("loginForm");
+let shadow = document.getElementById("shadow");
+let preloaders= document.getElementById("preloaders");
+let nav = document.getElementById("navbar");
 
 setTimeout(()=>{
-  btnFloating.classList.add("scale-in");
+  form.classList.add("scaled");
+  form.style.transform ="translate(-50%,-50%) scale(1,1)";
 }, 500)
 
+shadow.addEventListener("click", ()=>{
+  form.classList.remove("scaled");
+  form.classList.add("inverted");
+  form.style.transform ="translate(-50%,-50%) scale(0,0)";
+  shadow.style.opacity = "0";
+  setTimeout(()=>{
+    shadow.style.display="none"
+    preloaders.style.filter="none";
+    nav.style.filter="none";
+    main();
+  } ,300);
+})
+
+
+function main(){
+  setTimeout(()=>{
+    btnFloating.classList.add("scale-in");
+  }, 500);
+}

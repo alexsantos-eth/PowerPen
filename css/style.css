@@ -10,6 +10,7 @@ body{
   overscroll-behavior-x: none;
   background:rgba(0,0,0, 0.05) ;} 
 nav{
+  filter: blur(3px);
   position:fixed;
   top:0;
   z-index:10;
@@ -115,10 +116,10 @@ nav .nav-wrapper form input:focus{
 }
 
 main{
+
   margin-top: 50px;
   padding:21px 21px 11px 21px;
   /*background:linear-gradient(to bottom, #fff,rgba(0,0,0, 0.3)) ;*/
-  
 }
 main .card .card-image{
   height:150px;
@@ -149,7 +150,7 @@ main .card .card-action a:nth-child(2){
   margin-left:-10px;
 }
 .bold{
-  font-weight:bold;
+  font-weight:bold!important;
 }
 
 
@@ -194,10 +195,22 @@ main .horizontal .card-image img{
   
 }
 .input-field label {
-  color:#7E57C2;
-  
+  color:#7E57C2!important;
 } 
+.input-field input:focus{
+  border-bottom: 2px solid #7E57C2!important;
+  box-shadow:none!important;
+}
+.input-field .valid{
+  border-bottom: 1px solid #64B5F6!important;
+  box-shadow: 0 1px 0 0 #64B5F6!important;
+}
 
+#preloaders {
+  margin-top:-5px;
+  padding:0px 21px 11px 21px;
+  filter: blur(03px);
+}
 .loader .row:nth-child(3){
   margin:0!important;
 }
@@ -209,4 +222,72 @@ main .horizontal .card-image img{
 }
 .loaderM .row:nth-child(4) .progress{
   margin-bottom:05px!important;
+}
+#shadow{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0, 0.4);
+  opacity:0.3;
+  z-index:1000;
+  transition:all 0.3s ease-in;
+}
+@keyframes scaleX{
+  0%{
+    transform: translate(-50%,-50%) scale(0,0);
+  }
+  50%{
+    transform: translate(-50%,-50%) scale(1.1,1.1);
+  }
+  80%{
+    transform: translate(-50%,-50%) scale(1,1);
+  }
+}
+@keyframes scale-X{
+  80%{
+    transform: translate(-50%,-50%) scale(0,0);
+  }
+  50%{
+    transform: translate(-50%,-50%) scale(1.1,1.1);
+  }
+  0%{
+    transform: translate(-50%,-50%) scale(1,1);
+  }
+}
+#loginForm{
+  border-radius:5px;
+  width:90%;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0,0);
+  background:#fff;
+  z-index:1001;
+  padding:15px 30px 30px 30px;
+}
+
+.scaled{
+  animation: scaleX 0.3s linear 1;
+}
+.inverted{
+  animation: scale-X 0.3s linear 1;
+}
+#loginForm .row .input-field{
+  padding:0!important;
+}
+#loginForm .row .input-field label{
+  left:0!important;
+}
+#loginForm .row{
+  margin:0 auto;
+}
+
+#loginForm a:nth-child(1){
+  margin:15px 0 0px 0;
+  background:#3b5998;
+}
+
+#loginForm .row .gll{
+  background:#d44638;
 }

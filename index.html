@@ -35,7 +35,7 @@
 </head>
 <body>
   <!-- MAIN UI -->
-  <nav>
+  <nav id="navbar">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">
         <img src="./img/logoN.png"><span>owerPen</span></a>
@@ -80,11 +80,12 @@
        <i class="material-icons">event_note</i>Noticias
       </a>
     </li>
+         <div id="accountSection">
     <li>
       <div class="divider"></div>
     </li>
     <li>
-      <a class="subheader">Cuenta</a>
+   <a class="subheader">Cuenta</a>
     </li> 
     <li>
       <a href="#!">
@@ -101,6 +102,7 @@
         <i class="material-icons">file_download</i>Descargar app
       </a>
     </li>
+    </div>
   </ul> 
   <a class="btn-floating btn-large waves-effect grey darken-2 scale-transition scale-out">
     <i class="material-icons">create</i>
@@ -123,6 +125,7 @@
       desc='The shades go up Mothers staring down She dont know where hes been Or how long hes been out She said, "Boy, Im tired of waiting up While youre out with your friends" He said, "Mom, Im trying And Im living my life the best way that I can" "Cause Im trying to be somebody" Im not trying to be somebody'
       img="./img/example.jpg">
     </news-feed> -->
+    </main>
     <section id="preloaders">
       <div class="card loader">
         <div class="card-content">
@@ -168,7 +171,20 @@
         </div>
       </div>
     </section>
-  </main>
+
+  <section id="shadow"></section>
+   <form id="loginForm" class="z-depth-4">
+    <h5 class="bold">Iniciar Sesión</h5>
+    <p>Puedes iniciar sesión con tu cuenta o continuar navegando como invitado.</p> 
+    <div class="row">
+     <a class="btn waves-effect fbL col s12"><i class="material-icons"></i>Iniciar con Facebook</a>
+     </div>
+     <div class="row">
+
+     <a class="btn waves-effect gll col s12"><i class="material-icons"></i>Iniciar con Google</a>
+
+     </div>
+    </form>
   <script src="./js/main.js"></script>
   <script src="./app.js"></script>
 </body>
