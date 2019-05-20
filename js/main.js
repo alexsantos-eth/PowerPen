@@ -122,7 +122,7 @@ setTimeout(()=>{
   menuBtn.style.opacity="1";
 }, 200)
 setTimeout(() =>{
-
+    title.style.transition="all 0.3s ease-in"
     title.style.opacity="1";
 
   },600)

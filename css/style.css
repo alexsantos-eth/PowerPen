@@ -23,7 +23,6 @@ nav div.nav-wrapper a.brand-logo {
   color:#fff;
   opacity:0;
   font-size:2rem;
-  transition:all 0.3s ease-in;
   font-family: 'Poppins', sans-serif;
 }
 nav .nav-wrapper .brand-logo span{
