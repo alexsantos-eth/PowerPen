@@ -118,9 +118,14 @@ let nav = document.getElementById("navbar");
 
 setTimeout(()=>{
   searchBtn.style.opacity="1";
-  title.style.opacity="1";
+  searchInput.style.display="block";
   menuBtn.style.opacity="1";
 }, 200)
+setTimeout(() =>{
+
+    title.style.opacity="1";
+
+  },400)
 
 setTimeout(()=>{
   form.classList.add("scaled");

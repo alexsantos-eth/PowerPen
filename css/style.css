@@ -47,6 +47,7 @@ nav div.nav-wrapper .searchBtn{
 }
 
 nav .nav-wrapper form input{
+  display:none;
   opacity:0;
   position:fixed;
   top:13px;
