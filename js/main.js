@@ -114,6 +114,12 @@ let shadow = document.getElementById("shadow");
 let preloaders= document.getElementById("preloaders");
 let nav = document.getElementById("navbar");
 
+
+setTimeout(()=>{
+  nav.style.opacity="1";
+  preloaders.style.opacity="1";
+}, 100)
+
 setTimeout(()=>{
   form.classList.add("scaled");
   form.style.opacity="1";
