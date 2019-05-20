@@ -209,7 +209,6 @@ main .horizontal .card-image img{
   transition: all 0.1s ease-in;
   padding:0px 21px 11px 21px;
   filter:blur(3px);
-  opacity:0;
 }
 .loader .row:nth-child(3){
   margin:0!important;

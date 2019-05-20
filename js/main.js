@@ -117,8 +117,7 @@ let nav = document.getElementById("navbar");
 
 setTimeout(()=>{
   nav.style.opacity="1";
-  preloaders.style.opacity="1";
-}, 100)
+}, 200)
 
 setTimeout(()=>{
   form.classList.add("scaled");
