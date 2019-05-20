@@ -69,6 +69,7 @@ function notifyMe(msg, body) {
 
 var searchBtn = document.getElementById("searchBtn");
 var title = document.querySelector(".brand-logo");
+var menuBtn = document.querySelector(".menuIcon");
 var imgLogo = document.querySelector(".brand-logo > img");
 var toggleSearch =false;
 let l = title.style.left;
@@ -116,7 +117,9 @@ let nav = document.getElementById("navbar");
 
 
 setTimeout(()=>{
-  nav.style.opacity="1";
+  searchBtn.style.opacity="1";
+  title.style.opacity="1";
+  menuBtn.style.opacity="1";
 }, 200)
 
 setTimeout(()=>{
