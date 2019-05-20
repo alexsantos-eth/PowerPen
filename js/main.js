@@ -125,7 +125,7 @@ setTimeout(() =>{
 
     title.style.opacity="1";
 
-  },400)
+  },600)
 
 setTimeout(()=>{
   form.classList.add("scaled");
