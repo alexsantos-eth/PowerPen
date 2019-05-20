@@ -120,7 +120,7 @@ setTimeout(()=>{
   searchBtn.style.opacity="1";
   searchInput.style.display="block";
   menuBtn.style.opacity="1";
-}, 200)
+}, 300)
 setTimeout(() =>{
     title.style.transition="all 0.3s ease-in"
     title.style.opacity="1";
