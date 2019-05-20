@@ -106,9 +106,6 @@ searchInput.addEventListener("focusout",()=>{
   }, 10)
 })
 
-
-
-
 //animations
 
 let btnFloating = document.querySelector(".btn-floating");
@@ -138,5 +135,4 @@ function main(){
   setTimeout(()=>{
     btnFloating.classList.add("scale-in");
   }, 500);
-  
 }
