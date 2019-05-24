@@ -116,6 +116,29 @@ let preloaders= document.getElementById("preloaders");
 let nav = document.getElementById("navbar");
 
 
+btnFloating.addEventListener("click", ()=>{
+  fadeIn();
+})
+function fadeIn(){
+  form.classList.remove("inverted");
+  shadow.style.display="block";
+  setTimeout(()=>{
+    form.style.transform ="translate(-50%,-50%) scale(1,1)";
+    form.classList.add("scaled");
+    form.style.opacity = "1";
+  }, 500)
+}
+
+function fadeOut(){
+  form.classList.remove("scaled");
+  form.classList.add("inverted");
+  form.style.transform ="translate(-50%,-50%) scale(0,0)";
+  shadow.style.display ="none";
+  setTimeout(()=>{
+    main();
+  } ,300);
+}
+
 setTimeout(()=>{
   searchBtn.style.opacity="1";
   searchInput.style.display="block";
@@ -131,16 +154,7 @@ setTimeout(()=>{
   form.classList.add("scaled");
   form.style.opacity="1";
   shadow.addEventListener("click", ()=>{
-  form.classList.remove("scaled");
-  form.classList.add("inverted");
-  form.style.transform ="translate(-50%,-50%) scale(0,0)";
-  shadow.style.opacity = "0";
-  setTimeout(()=>{
-    shadow.style.display="none"
-    preloaders.style.filter="none";
-    nav.style.filter="none";
-    main();
-  } ,300);
+  fadeOut();
 })
 }, 500)
 
@@ -149,3 +163,39 @@ function main(){
     btnFloating.classList.add("scale-in");
   }, 500);
 }
+
+
+//EventSource
+
+let logoutBtn = document.getElementById("logout");
+
+logoutBtn.addEventListener("click",()=>{
+  swal({
+  title: "¿Deseas salir? ",
+  text: "Puedes cambiar de cuenta o seguir visualizando el contenido como invitado.",
+ 
+  buttons: ["Cancelar", "Si"],
+  dangerMode: true,
+})
+.then((e) => {
+  if (e) {
+    swal({
+      icon: "success",
+      title :" ", 
+      iconColor:"#7E57C2", 
+      buttons:false
+    }) .then((e) =>{
+      logout();
+      })
+    setTimeout(()=>{
+      logout();
+    }, 2000)
+  }
+})
+}) 
+
+function logout(){
+  window.location = "./";
+}
+
+//eruda.init();
