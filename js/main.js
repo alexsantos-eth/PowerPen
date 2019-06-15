@@ -25,6 +25,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
       });
   });
 });
+
+window.addEventListener('offline', () =>   M.toast({html: 'Sin conexión a Internet!'}));
+
 let generalSide = false;
 var elems = document.querySelectorAll('.sidenav');
 var sideNav = M.Sidenav.init(elems[0], {preventScrolling:true, onOpenStart:()=>{
@@ -66,7 +69,6 @@ function notifyMe(msg, body) {
     });
   }
 }
-
 var searchBtn = document.getElementById("searchBtn");
 var title = document.querySelector(".brand-logo");
 var menuBtn = document.querySelector(".menuIcon");
@@ -100,6 +102,7 @@ searchBtn.addEventListener("click", () =>{
 })
 
 searchInput.addEventListener("focusout",()=>{
+
   setTimeout(()=>{
     if(toggleSearch && !generalSide){
       searchBtn.click();
@@ -112,31 +115,35 @@ searchInput.addEventListener("focusout",()=>{
 let btnFloating = document.querySelector(".btn-floating");
 let form = document.getElementById("loginForm");
 let shadow = document.getElementById("shadow");
-let preloaders= document.getElementById("preloaders");
+//let preloaders= document.getElementById("preloaders");
 let nav = document.getElementById("navbar");
+let loginBtn = document.querySelector(".login");
 
-
+loginBtn.addEventListener("click", ()=>{
+  fadeIn();
+})
 btnFloating.addEventListener("click", ()=>{
   fadeIn();
 })
 function fadeIn(){
-  form.classList.remove("inverted");
-  shadow.style.display="block";
-  setTimeout(()=>{
-    form.style.transform ="translate(-50%,-50%) scale(1,1)";
-    form.classList.add("scaled");
-    form.style.opacity = "1";
-  }, 500)
+  shadow.style.display="block"; 
+  form.style.display="block"; 
+ setTimeout(() =>{
+ 	form.style.opacity=1;
+     shadow.style.opacity=1;
+ }, 10);
 }
-
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
 function fadeOut(){
-  form.classList.remove("scaled");
-  form.classList.add("inverted");
-  form.style.transform ="translate(-50%,-50%) scale(0,0)";
-  shadow.style.display ="none";
-  setTimeout(()=>{
-    main();
-  } ,300);
+  form.style.opacity=0;
+  shadow.style.opacity ="0";
+  setTimeout(() =>{
+    shadow.style.display =  "none" ; 
+    form.style.display =  "none" ;
+  }, 300);
 }
 
 setTimeout(()=>{
@@ -150,21 +157,25 @@ setTimeout(() =>{
 
   },600)
 
-setTimeout(()=>{
-  form.classList.add("scaled");
-  form.style.opacity="1";
-  shadow.addEventListener("click", ()=>{
-  fadeOut();
-})
-}, 500)
+function fixSpace() {
+	let pre = document.querySelectorAll(".nb");
+for(let i = 0 ;i<pre.length;i++){
+	pre[i].innerHTML = pre[i].innerHTML.replace(/&amp;nbsp;/gi, " ").replaceAll("&lt;br /&gt;", "<br />").replaceAll("<br/>", " ");
+	let link = pre[i].innerHTML.substr(pre[i].innerHTML.indexOf("htt"));
+	if(link.length > 5){
+	pre[i].innerHTML = pre[i].innerHTML.substr(0, pre[i].innerHTML.indexOf("htt")) + `<br /><br /><a href="${link}" class="truncate">${link}</a>`;
+	}
+	}
+} 
 
-function main(){
-  setTimeout(()=>{
-    btnFloating.classList.add("scale-in");
-  }, 500);
-}
-
-
+/*setTimeout(() =>{
+    fixSpace();
+  },2000)*/
+  
+shadow.addEventListener("click", () =>{
+	fadeOut() ;
+	
+	}) ;
 //EventSource
 
 let logoutBtn = document.getElementById("logout");
@@ -197,5 +208,6 @@ logoutBtn.addEventListener("click",()=>{
 function logout(){
   window.location = "./";
 }
-
 //eruda.init();
+
+

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <title>PowerPen</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <title>PowerPen</title>
-  <meta name="keywords" content="education, homeworks, university, usac, USAC, ingeniería, u, universidad, fiusac">
+  <meta name="keywords" content="education, homeworks, university, usac, USAC, ingeniería, u, universidad, fiusac, facultad, de, ingenieria, semestre, ingreso, primer">
   <meta name="Author" content="AlexSantos">
   <meta name="Robots" content="follow">
   <meta name="description" content="PowerPen is an OpenSource app for upload homeworks, docs, and share education content, it's built from students to students.">
   <meta name="MobileOptimized" content="yes">
   <meta name="HandheldFriendly" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta name="theme-color" content="#673AB7">
+  <meta name="theme-color" content="#2196F3">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="PowerPen">
@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" href="./img/iconN.png">
   <link rel="favicon" type="image/png" href="./img/iconN.png">
   <link rel="apple-touch-icon" href="./img/iconN.png" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" >
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -36,77 +36,85 @@
   <!-- MAIN UI -->
   <nav id="navbar">
     <div class="nav-wrapper">
-      <a role="button" class="brand-logo">
+      <a href="./" class="brand-logo">
         <img src="./img/logoN.png"><span>owerPen</span></a>
-      <a role="button" data-target="slide-out" class="sidenav-trigger menuIcon">
+      <a role="button" data-target="slide-out" class="sidenav-trigger menuIcon" style="opacity:0">
         <i class="material-icons">menu</i>
       </a>
-      <a role="button" id="searchBtn" class="searchBtn right">
+      <a role="button" id="searchBtn" class="searchBtn right" style="opacity:0">
         <i class="material-icons">search</i>
       </a>
-       <form>
-         <input type="search" id="searchInput" placeholder="Buscar artículos">
-       </form>
+       <div class="form">
+         <input onfocus="this.value=''" type="search" id="searchInput" placeholder="Buscar artículos" >
+       </div>
     </div>
       </nav>
-  <ul id="slide-out" class="sidenav">
+  <ul id="slide-out" class="sidenav sidenav-fixed">
     <li>
       <div class="user-view">
         <div class="background">
           <img src="./img/classrooms.jpg">
         </div> 
         <a role="button">
-          <img class="circle" src="./img/users.jpg">
+          <img class="circle" src="./img/users1.jpg">
         </a>
         <a role="button" class="userInfo">
-          <span class="name">Alex Santos</span>
-          <span class="email">as62971@gmail.com</span>
+          <span class="name">PowerPen®</span>
+          <span class="email">Dev. Alex Santos</span>
         </a>
       </div>
     </li>
-    <li>
-      <a role="button">
-       <i class="material-icons">import_contacts</i>Recursos
-      </a>
-    </li>
-    <li>
-      <a role="button">
-       <i class="material-icons">style</i>Clases
-      </a>
-    </li>
-    <li>
+    <li class="sBtn feedsBtn active">
       <a role="button">
        <i class="material-icons">event_note</i>Noticias
       </a>
     </li>
-         <div id="accountSection">
+    <li class="sBtn resources">
+      <a role="button">
+       <i class="material-icons">import_contacts</i>Recursos
+      </a>
+    </li>
+
     <li>
       <div class="divider"></div>
     </li>
     <li>
-   <a class="subheader">Cuenta</a>
+   <a class="subheader">Applicación</a>
     </li> 
+          <div id="accountSection">
     <li>
       <a role="button">
        <i class="material-icons">settings</i>Configuracion
      </a>
     </li>
+    
     <li>
       <a role="button" id="logout">
        <i class="material-icons">logout</i>Cerrar sesión
      </a>
     </li>
-    <li class="download">
-      <a role="button" class="waves-effect add-button">
-        <i class="material-icons">file_download</i>Descargar app
+    </div>
+        <li class='login'>
+      <a role="button" id="login">
+       <i class="material-icons">person</i>Iniciar sesión
+     </a>
+    </li>
+        <li class="shareBtn" >
+      <a role="button">
+       <i class="material-icons">share</i>Compartir
       </a>
     </li>
-    </div>
+    <li class="download">
+      <a role="button" class="waves-effect add-button">
+        <i class="material-icons">arrow_downward</i>Descargar app
+      </a>
+    </li>
   </ul> 
-  <a class="btn-floating btn-large waves-effect grey darken-2 scale-transition scale-out">
-    <i class="material-icons">create</i>
+  <a style="opacity:0" class="btn-floating btn-large waves-effect deep-purple darken-3 scale-out scale-transition">
+    <i class="material-icons">add</i>
   </a>
    <!--- COMPONENTS -->
+
   <main id="content">
    <!--<note 
       name="Social Humanística 1 "
@@ -114,33 +122,36 @@
       img="./img/example2.jpg"
       total="5">
     </note>
+    
     <class 
       name="Técnicas de estudio e investigación"
       desc="Semestre Sección F"
       not="3">
     </class>
+    
     <news-feed 
       title="Be somebody by 3 Doors Down Lyrics" 
       desc='The shades go up Mothers staring down She dont know where hes been Or how long hes been out She said, "Boy, Im tired of waiting up While youre out with your friends" He said, "Mom, Im trying And Im living my life the best way that I can" "Cause Im trying to be somebody" Im not trying to be somebody'
       img="./img/example.jpg">
     </news-feed>-->
     </main>
-    <section id="preloaders">
+
+    <section id="preloaders" >
       <div class="card loader">
         <div class="card-content">
           <div class="row">
             <div class="progress grey lighten-3 col s12">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate "></div>
             </div> 
           </div>
           <div class="row">
             <div class="progress grey lighten-3 col s6">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate "></div>
             </div>
           </div>
           <div class="row">
             <div class="progress grey lighten-3 col s9">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate "></div>
             </div>
           </div>
         </div>
@@ -149,45 +160,194 @@
         <div class="card-content">
           <div class="row">
             <div class="progress grey lighten-3 col s10">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate  "></div>
             </div> 
           </div>
           <div class="row">
             <div class="progress grey lighten-3 col s8">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate  "></div>
             </div>
           </div>
           <div class="row">
             <div class="progress grey lighten-3 col s12">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate "></div>
             </div>
           </div>
           <div class="row">
             <div class="progress grey lighten-3 col s5">
-              <div class="indeterminate deep-purple lighten-3"></div>
+              <div class="indeterminate "></div>
             </div>
           </div>
         </div>
       </div>
     </section>
+ 
   <section id="shadow"></section>
-   <form id="loginForm" class="z-depth-4">
+   <form id="loginForm" class="z-depth-4 inverted">
     <h5 class="bold">Iniciar Sesión</h5>
     <p>Puedes iniciar sesión con tu cuenta o continuar navegando como invitado.</p> 
     <div class="row">
      <a class="btn waves-effect fbL col s12"><i class="socicon-facebook"></i> Iniciar con Facebook</a>
      </div>
      <div class="row">
-
      <a class="btn waves-effect gll col s12"><i class="socicon-google"></i> &nbsp;Iniciar con Google</a>
      </div>
     </form>
-
+    <section id="shareBox">
+    </section>
   <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?u8vidh">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./js/main.js"></script>
   <script src="./app.js"></script>
+  <script src="./js/ajax.js"></script>
+  <script>
+let resources = document.querySelector(".resources");
+let feedsBtn = document.querySelector(".feedsBtn"); 
+let shareBtn= document.querySelector(".shareBtn");
+let main = document.getElementById('content') ;
+let preloaders = document.getElementById("preloaders");
+let tab = 0;
+
+const loadFiles = function() {
+	tab = 1;
+	resources.classList.add("active");
+	feedsBtn.classList.remove("active");
+	main = document.getElementById('content') ;
+	main.innerHTML = "";
+    preloaders.style.display="block";
+	send('files',(data)=>{
+		
+		btnFloating.style.opacity='1';
+	setTimeout(() =>{
+    main = document.getElementById('content') ;
+    preloaders.style.display="none";
+    if(tab === 1) {
+    main.innerHTML = '<section class="addSec searchBanner z-depth-4 "><h3>Departamento de matemática</h3><p>Puedes utilizar el buscador <i class="material-icons" >search</i> para encontrar archivos en el departamento de matemática, como parciales, notas, secciones, etc. </p></section><div class="ctFiles" >' +data+'</div>' ;
+    new Vue({el : "#content"} );
+    main = document.getElementById('content') ;
+    
+       for(let i =0;i<main.childNodes[1].childNodes.length;i++){
+        	setTimeout(() =>{
+        	    main.childNodes[1].childNodes[i].style.opacity = '1';
+                main.childNodes[1].childNodes[i].style.transform = 'scale(1,1)';
+        	}, i*300);
+         main.childNodes[1].childNodes[i].childNodes[0].childNodes[1].childNodes[1].childNodes[0].addEventListener("click", (e) =>{
+        	 if (navigator.share) {
+  navigator.share({
+      title: e.target.getAttribute("data-title") ,
+      text: e.target.getAttribute("data-text") ,
+      url: e.target.getAttribute("data-link") 
+  })
+}
+       }) ;
+        }
+        setTimeout(()=>{
+        btnFloating.classList.add("scale-in");
+       }, 500);
+       
+} 
+}, 300)
+},  () =>{if(tab === 1){loadFiles()} })
+	} 
+	
+function searchFiles(val){
+	
+	main = document.getElementById('content');
+	main.innerHTML = "";
+	preloaders.style.display="block";
+send({func:'search', vals:val} , (data) =>{
+	
+	preloaders.style.display="none";
+	main.innerHTML = '<section class="searchFields">'+data+'</section>' ;
+	new Vue({el : "#content"} );
+	
+	main = document.getElementById('content') ;
+	for(let i =0;i<main.childNodes[0].childNodes.length;i++){
+        	setTimeout(() =>{
+        	    main.childNodes[0].childNodes[i].style.opacity = '1';
+                main.childNodes[0].childNodes[i].style.transform = 'scale(1,1)';
+        	}, i*300);
+         main.childNodes[0].childNodes[i].childNodes[0].childNodes[0].childNodes[1].childNodes[0].addEventListener("click", (e) =>{
+        	 if (navigator.share) {
+  navigator.share({
+      title: e.target.getAttribute("data-title") ,
+      text: e.target.getAttribute("data-text") ,
+      url: e.target.getAttribute("data-link") 
+  })
+}}) } 
+}) ;
+	} 
+	
+  	const loads = function () {
+  	tab = 0;
+  	
+  resources.classList.remove("active");
+	feedsBtn.classList.add("active");
+	main = document.getElementById('content');
+	main.innerHTML = "";
+	preloaders.style.display="block";
+      send('on', (data) =>{
+      preloaders.style.display="none";
+  	
+     if(tab === 0){
+      main.innerHTML='<section class="addSec feedBanner z-depth-4 "><h3>Portal de Ingeniería</h3><p>Todas las noticias <i class="material-icons">event_note</i> son obtenidas del <a href="https://portal.ingenieria.usac.edu.gt/" class="bold white-text" >Portal de Ingeniería</a> así como la información e imágenes en ellas.</section><div class="ctFeeds">' +data+'</div>' ;
+      new Vue({el : "#content"} );
+      main = document.getElementById('content') ;
+        for(let i =0;i<main.childNodes[1].childNodes.length;i++){
+        	setTimeout(() =>{
+        	    main.childNodes[1].childNodes[i].style.opacity = '1';
+                main.childNodes[1].childNodes[i].style.transform = 'scale(1,1)';
+        	}, i*300);
+        
+        main.childNodes[1].childNodes[i].childNodes[0].childNodes[0].addEventListener("click",(e) =>{
+if (navigator.share) {
+	
+  navigator.share({
+      title: "Portal de Ingeniería" ,
+      text: e.target.getAttribute("data-text") ,
+      url: e.target.getAttribute("data-link") 
+  })
+  
+}
+       }) 
+       
+        }
+      setTimeout(()=>{
+      	fixSpace();
+        btnFloating.classList.add("scale-in");
+       }, 500);
+       
+      } 
+  	},  () =>{if(tab === 0){loads()}} ) 
+ } 
+ 
+ feedsBtn.addEventListener("click",() =>{sideNav.close();loads();} );
+ searchInput.addEventListener("keyup",(event) =>{  
+if (event.keyCode === 13) {
+    event.preventDefault();
+    searchFiles(searchInput.value) ;
+  }
+}) ;
+  searchInput.addEventListener("change",(event) =>{  
+    event.preventDefault();
+    searchFiles(searchInput.value) ;
+}) ;
+ resources.addEventListener("click",() =>{sideNav.close();loadFiles();} );
+ shareBtn.addEventListener("click", () =>{
+ 	
+ if (navigator.share) {
+  navigator.share({
+      title: 'PowerPen',
+      text: 'Prueba esta aplicación 😀 ',
+      url: window.location,
+  })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+}
+});
+ resources.click();
+  </script>
 </body>
 </html>

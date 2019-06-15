@@ -3,18 +3,40 @@
   padding:0;
   box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
+-moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer */
+   -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; 
+  -webkit-tap-highlight-color:transparent;
+   -webkit-user-drag:none;
 }
+pre{
+	display:block;
+	visibility:visible;
+	opacity:1;
+	background:red;
+	height:50px;
+	overflow:auto;
+	all:initial;
+	} 
+::selection{
+	background:#7E57C2;
+	} 
+
 body{
   font-size:12px;
   overscroll-behavior-x: none;
-  background:rgba(0,0,0, 0.05) ;} 
+ background:rgba(0,0,0, 0.05) ;
+} 
+  
 nav{
   position:fixed;
   top:0;
   z-index:10;
 }
 nav div.nav-wrapper{
-  background:#7E57C2;
+  background:linear-gradient(to left, #673AB7, #2196F3) ;
 }
 
 nav div.nav-wrapper a.brand-logo {
@@ -44,7 +66,7 @@ nav div.nav-wrapper .searchBtn{
   transition:all 0.3s ease-in;
 }
 
-nav .nav-wrapper form input{
+nav .nav-wrapper .form input{
   display:none;
   opacity:0;
   position:fixed;
@@ -53,17 +75,22 @@ nav .nav-wrapper form input{
   color:#777;
   height:30px!important;
   padding:0px 5px!important;
-  border-bottom:none!important;
+  border:none!important;
   transition:all 0.5s ease-in!important;
   text-align:right;
   background:#fff!important;
   border-radius:80px!important;
+  outline:none!important;
+  box-shadow:none!important ;
 }
 
 nav .nav-wrapper form input:focus{
   
   box-shadow:none!important;
 }
+#accountSection{
+	display:none;
+	} 
 .sidenav .user-view{
   display:flex;
   align-items: center ;
@@ -85,7 +112,7 @@ nav .nav-wrapper form input:focus{
 }
 
 .sidenav .user-view .userInfo span{
-  color:#7E57C2;
+  color:#1976D2;
 }
 
 .sidenav .user-view .background img{
@@ -110,8 +137,35 @@ nav .nav-wrapper form input:focus{
 
 .sidenav .download a .material-icons{
   color:#fff;
+}
+.sideNav li{
+	transition:all 0.3s ease-in;
+	background:#fff;
+	} 
+.sidenav .sBtn:hover{
+  background:linear-gradient(to left, #2196F3, #1976D2);
+  
 } 
- 
+.sidenav .sBtn:focus{
+	
+  background:linear-gradient(to left, #2196F3, #1976D2);
+} 
+.sidenav .sBtn:focus a.{
+	color:#fff
+	
+	} 
+.sidenav .sBtn:hover a{
+	color:#fff
+	
+	} 
+.sidenav .sBtn:hover  a i{
+	color:#fff
+	
+	} 
+.sidenav .sBtn:focus  a i{
+	color:#fff
+	
+	} 
 .btn-floating{
   position:fixed;
   bottom:0;
@@ -126,15 +180,62 @@ main{
   padding:21px 21px 11px 21px;
   /*background:linear-gradient(to bottom, #fff,rgba(0,0,0, 0.3)) ;*/
 }
+
+main .feed{
+	transform:scale(0.5,0.5);
+	opacity:0;
+	transition:all 0.2s ease-out ;
+	overflow :hidden;
+  border-radius:05px;
+}
+main .downFeed{
+	background:linear-gradient(to right, #2196F3, #1976D2);
+	padding:0px 20px 10px 20px!important;
+	border-radius:20px;
+	color:#fff;
+	
+	} 
+main .file{
+	transform:scale(0.5,0.5);
+	opacity:0;
+	transition:all 0.2s ease-out ;
+}
+main .dep{
+	transform:scale(0.5,0.5);
+	opacity:0;
+	transition:all 0.2s ease-out ;
+}
 main .card .card-image{
   height:150px;
 }
+main  .card  .card-image::before{
+	
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:150%;
+	background:rgba(0,0,0,.08);
+	z-index:2;
+	} 
+main .card .card-image .shareCircle{
+	position:absolute;
+	padding:10px;
+	top:10px;
+	right:10px;
+	font-size:1.4em;
+	border-radius:500px;
+	color:#673AB7;
+	box-shadow:0 0 10px rgba(0,0,0, 0.2) ;
+	z-index :2;
+} 
 main .card .card-content a{
   padding:10px 0px;
   color:#7E57C2;
 }
 main .card .card-content a:nth-child(1){
-  margin-right:15px;
+  margin-right:5px;
 }
 main .card .card-content a i, .card-action a i{
   position: relative ;
@@ -162,39 +263,125 @@ main .card .card-content .moreBtn{
   top:178px;
   right:15px;
 }
+
 main .card .card-reveal .card-title{
-  line-height:27px;
+  line-height:20px;
   margin-bottom:20px;
+  font-size:1.4em;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
+  position:relative ;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
+
 main .card .card-reveal .closeBtn{
   position:absolute ;
-  right:20px;
-  top:25px;
+  right:5px;
+  top:5px;
 }
+main .horizontal .card-stacked .card-action {
+	background:linear-gradient(to right, #2196F3, #1976D2);
+	width:202.5%;
+	margin-left:-101.25%;
+	overflow :visible;
+	position:relative;
+		z-index:2;
+	} 
+	main .dep .card-stacked .card-action {
+		width:100%;
+		margin-left:0;
+		
+		} 
 main .horizontal .card-stacked .card-action a {
   margin-top:-2px;
   width:100%;
   display:inline-block;
   text-align:center;
   margin-left:-3px;
+  color:#fff;
 }
 main .horizontal{
   overflow: hidden ;
-  
-  
+  border-radius:05px;
 }
+.addSec{
+	margin-left:-2%;
+	width:104%;
+	border-radius:05px;
+	overflow:hidden;
+	font-family: 'Poppins', sans-serif;
+	padding:20px;
+	margin-bottom:15px;
+	background:linear-gradient(to right, #FFC107, #FFA000) ;
+}
+.addSec h3{
+	font-weight:bold;
+	margin:0;
+	font-size:2.5em;
+	color:#fff;
+} 
+
+.addSec p{
+	font-size:1.2em;
+	color:#eee;
+	} 
+.addSec p i{
+	position:relative ;
+	top:3px;
+	font-size:1.2em;
+} 
+main .horizontal .card-action  .shareCircle{
+	position:absolute ;
+	top:-50px;
+	left:10px;
+	padding:10px;
+	font-size:1.4em;
+	border-radius:500px;
+	color:#673AB7;
+	box-shadow:0 0 10px rgba(0,0,0, 0.2) ;
+	z-index :2;
+	} 
+	main .dep .card-action  .shareCircle{
+		left:unset;
+		right:10px;
+		top:-20px;
+		} 
 main .horizontal .card-stacked .card-action a i{
   position:relative ;
   top:8px; 
 }
-
+main .horizontal .card-stacked .card-content{
+	
+	padding:10px 17px 17px;
+	
+	} 
+	
+	main .horizontal .card-stacked .card-content h6{
+		font-weight:bold;
+		color:#555;
+		} 
+	main .horizontal .card-stacked{
+		border-left:1px solid rgba(0,0,0,.1);
+	
+		} 
 main .horizontal .card-image img{
   object-fit:cover;
+ 
 }
+main .horizontal .card-image::before{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:150%;
+	background:rgba(0,0,0,.08);
+	z-index:2;
+	} 
 .input-field label {
   color:#7E57C2!important;
 } 
@@ -208,10 +395,10 @@ main .horizontal .card-image img{
 }
 
 #preloaders {
-  margin-top:-5px;
-  transition: all 0.1s ease-in;
-  padding:0px 21px 11px 21px;
+  margin-top:-10px;
   
+  padding:0px 21px 11px 21px;
+  opacity:0.7;
 }
 .loader .row:nth-child(3){
   margin:0!important;
@@ -225,59 +412,43 @@ main .horizontal .card-image img{
 .loaderM .row:nth-child(4) .progress{
   margin-bottom:05px!important;
 }
+.loader  .indeterminate{
+	background:#1976D2;
+	} 
+	.loader, .loaderM{
+		overflow :hidden;
+  border-radius:05px;
+		
+		}
+	.loaderM  .indeterminate{
+	background:#1976D2;
+	} 
 #shadow{
   position:fixed;
   top:0;
   width:100%;
   height:100vh;
   background:rgba(0,0,0, 0.4);
-  opacity:1;
+  opacity:0;
   z-index:1000;
+  display:none;
+  transition:opacity 0.3s ease-out;
 }
-@keyframes scaleX{
-  0%{
-    transform: translate(-50%,-50%) scale(0.7,0.7);
-    opacity:0;
-  }
-  50%{
-    transform: translate(-50%,-50%) scale(1.1,1.1);
-  }
-  80%{
-    transform: translate(-50%,-50%) scale(1,1);
-    opacity:1;
-  }
-}
-@keyframes scale-X{
-  80%{
-    transform: translate(-50%,-50%) scale(0,0);
-  }
-  50%{
-    transform: translate(-50%,-50%) scale(1.1,1.1);
-  }
-  0%{
-    transform: translate(-50%,-50%) scale(1,1);
-  }
-}
+
 #loginForm{
   border-radius:5px;
   width:90%;
   position:fixed;
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%) scale(1,1);
+  transform:translate(-50%,-50%);
   background:#fff;
   z-index:1001;
   padding:15px 30px 30px 30px;
   text-align:center;
   opacity:0;
-  
-}
-
-.scaled{
-  animation:scaleX 0.2s linear 1;
-}
-.inverted{
-  animation: scale-X 0.3s linear 1;
+  transition:opacity 0.3s;
+  display:none;
 }
 #loginForm .row .input-field{
   padding:0!important;
@@ -326,7 +497,15 @@ main .horizontal .card-image img{
   text-align:justify;
   padding:0 25px;
 }
-
+.active{
+	background:linear-gradient(to left, #2196F3, #1976D2);
+	}
+	.active a{
+		color:#fff!important;
+		}
+		.active a i{
+		color:#fff!important;
+		} 
 .swal-icon.swal-success {
   border-color: red !important;
 }
@@ -341,3 +520,6 @@ main .horizontal .card-image img{
   border-color :#7E57C2 ;
   opacity:0.6;
 }
+
+
+
